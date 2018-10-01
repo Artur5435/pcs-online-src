@@ -1,0 +1,200 @@
+<div class="form">
+  <div class="container">
+    
+    <div class="header bgBlack">
+      <p id="Title" class="title bgRed">
+        WYNIKI WYSZUKIWANIA
+      </p>
+    </div>
+    <div class="products">
+      <div class="popUpProduct">
+        <div class="imageContainer">
+          <img class="productImage" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg">
+        </div>
+        <div class="info">
+          <div class="bgBlack infoT" *ngIf="item.ID">
+            <p class="">KOD PRODUKTU:</p>
+            <p class="data bgRed">{{item.ID}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.Producent">
+            <p class="">PRODUCENT:</p>
+            <p class="data bgRed">{{item.Producent}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.Nazwa">
+            <p class="">NAZWA PRODUKTU:</p>
+            <p class="data bgRed">{{item.Nazwa}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.TypProduktu">
+            <p class="">TYP PRODUKTU:</p>
+            <p class="data bgRed">{{item.TypProduktu}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.CenaBrutto">
+            <p class="">CENA PRODUKTU:</p>
+            <p class="data bgRed">{{item.CenaBrutto}},-</p>
+          </div>
+          <div class="description" *ngIf="item.Opis">
+            <p class="bgBlack head">OPIS:</p>
+            <br>
+            <p>{{item.Opis}}</p>
+          </div>
+          <div class="foot">
+            <div class="countContainer bgBlack">
+              <div (click)="SubCount()" class="sub bgRed">
+                -
+              </div>
+
+              <div class="count">{{this.popedCount}}</div>
+              <div (click)="AddCount()" class="add bgRed">
+                +
+              </div>
+              <div class="">
+                x
+              </div>
+              <div class="">
+                {{item.CenaBrutto}},-
+              </div>
+              <div class="">
+                =
+              </div>
+              <div class="">
+                {{item.CenaBrutto*this.popedCount}},-
+              </div>
+            </div>
+            <div class="button" (click)="AddToCartPop(this.popedIndex, this.popedCount)">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+          <div (click)="closePopUp()" class="close">
+            x
+          </div>
+        </div>
+      </div>
+      <p>NAJLEPSZY OLEJ DLA TWOJEGO SAMOCHODU</p>
+      <div class="product" *ngFor="let item of this.resultItems.Oleje_polecane; let i = index; trackBy: trackItem">
+        <div class="header" (click)="popUpSet(i,0)">
+          <p class="producent bgBlack">{{item.Producent}}</p>
+          <i class="fas fa-info details bgRed" (click)="popUpSet(i,0)"></i>
+        </div>
+        <div class="info">
+          <div class="imageHolder" (click)="popUpSet(i,0)">
+            <img class="image" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg" />
+          </div>
+          <div class="description">
+            <p class="price">{{item.CenaBrutto}},-</p>
+            <div class="infoBot">
+              <p class="additional">{{item.Nazwa}}</p>
+              <div class="button" (click)="AddToCart(i,0)">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="showMore">
+        <p class="desc">
+          Zobacz inne produkty dopasowane do twojego samochodu
+        </p>
+        <div class="moreB">
+          <div class="arrow" data-filter="#mid">
+            <img src="">
+          </div>
+          <div class="but bgBlack">
+            <p class="type bgRed">KLASA EKONOMICZNA</p>
+          </div>
+          <div class="results left">
+            <div class="product" *ngFor="let item of this.resultItems.Oleje_eko; let i = index; trackBy: trackItem">
+              <div class="header" (click)="popUpSet(i,1)">
+                <p class="producent bgBlack">{{item.Producent}}</p>
+                <i class="fas fa-info details bgRed" (click)="popUpSet(i,1)"></i>
+              </div>
+              <div class="info">
+                <div class="imageHolder" (click)="popUpSet(i,1)">
+                  <img class="image" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg" />
+                </div>
+                <div class="description">
+                  <p class="price">{{item.CenaBrutto}},-</p>
+                  <div class="infoBot">
+                    <p class="additional">{{item.Nazwa}}</p>
+                    <div class="button" (click)="AddToCart(i,1)">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="moreB">
+          <div class="arrow" data-filter="#mid">
+            <img src="">
+          </div>
+          <div class="but bgBlack">
+            <p class="type bgRed">KLASA ŚREDNIA</p>
+          </div>
+          <div class="results middle">
+            <div class="product" *ngFor="let item of this.resultItems.Oleje_mid; let i = index; trackBy: trackItem">
+              <div class="header" (click)="popUpSet(i,2)">
+                <p class="producent bgBlack">{{item.Producent}}</p>
+                <i class="fas fa-info details bgRed" (click)="popUpSet(i,2)"></i>
+              </div>
+              <div class="info">
+                <div class="imageHolder" (click)="popUpSet(i,2)">
+                  <img class="image" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg" />
+                </div>
+                <div class="description">
+                  <p class="price">{{item.CenaBrutto}},-</p>
+                  <div class="infoBot">
+                    <p class="additional">{{item.Nazwa}}</p>
+                    <div class="button" (click)="AddToCart(i,2)">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="moreB">
+          <div class="arrow" data-filter="#mid">
+            <img src="">
+          </div>
+          <div class="but bgBlack">
+            <p class="type bgRed">KLASA PREMIUM</p>
+          </div>
+          <div class="results right">
+            <div class="product" *ngFor="let item of this.resultItems.Oleje_prem; let i = index; trackBy: trackItem">
+              <div class="header" (click)="popUpSet(i,3)">
+                <p class="producent bgBlack">{{item.Producent}}</p>
+                <i class="fas fa-info details bgRed" (click)="popUpSet(i,3)"></i>
+              </div>
+              <div class="info">
+                <div class="imageHolder" (click)="popUpSet(i,3)">
+                  <img class="image" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg" />
+                </div>
+                <div class="description">
+                  <p class="price">{{item.CenaBrutto}},-</p>
+                  <div class="infoBot">
+                    <p class="additional">{{item.Nazwa}}</p>
+                    <div class="button" (click)="AddToCart(i,3)">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="goForward bgRed" routerLink="/zamowienie">
+        JEDZIEMY Z TYM DALEJ >
+    </div>
+    <div class="goBack bgBlack" routerLink="/szukaj">
+        <p>< WRÓĆ</p>
+    </div>
+  </div>
+</div>

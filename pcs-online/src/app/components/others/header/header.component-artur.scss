@@ -1,0 +1,120 @@
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+#header {
+    width: 100%;
+    margin-top: 2%;
+    background-image: url('../../../assets/img/blackback.png');
+    text-align: center;
+    border-bottom: solid red 3px;
+    color: white;
+    padding-bottom: 1%;
+
+    hr {
+        border: 0.5px solid white;
+    }
+
+    .haeder-table {
+        display: inline-block;
+        height: 40%;
+        margin-top: 0%;
+    }
+
+    #main-logo {
+        width:70%;
+        
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    #left, #right {
+        width: 15%;
+        color: white;
+
+        #user-panel{
+            width: 80%;
+            margin: auto;
+
+            #upper{
+                border-radius: 15px 15px 0 0;
+                background-color: white;
+                color: black;
+                padding: 2% 0;
+            }
+
+            #bottom {
+                border-radius: 0 0 15px 15px;
+                border: solid white 3px;
+                padding: 2% 0;
+            }
+        }
+
+        #register {
+            margin-top: 5%;
+
+            b {
+                color: red;
+            }
+        }
+    }
+
+    #bottom-panel {
+        width: 100%;
+        line-height: 100%;
+        height: 7%;
+        
+        #trust {
+            width: 100%;
+            border: white solid 3px;
+            border-radius: 10px 0 0 10px;
+            border-right: none;
+
+        }
+    }
+    .bottom-panel-item-center {
+        display: inline-block;
+        font-size: 4vh;
+        width: 60%;
+    }
+
+    .bottom-panel-item {
+        display: inline-block;
+        width: 20%;
+
+        i {
+            margin: 0 4%;
+            font-size: 4vh;
+            cursor: pointer;
+        }
+    }
+}
+
+.row {
+    margin-top: 1%;
+    height: 5vh;
+    line-height: 5vh;
+    color: white;
+    text-align: center;
+    font-size: 1.5vh;
+    font-weight: bold;
+
+    #menu-dropdown, #search, #carret {
+        background-image: url('../../../assets/img/blackback.png');
+        height: 100%;
+        width: 100%;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    #navbar {
+        background-image: url('../../../assets/img/redback.png');
+        height: 100%;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+}

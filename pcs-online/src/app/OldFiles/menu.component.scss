@@ -1,0 +1,108 @@
+.menu {
+	top: 23%;
+	position: fixed;
+	.container {
+	    max-width: none;
+		width: 71vw;
+		margin-left: 0.2%;
+		.row {
+			color: white; 
+			margin-left: 3%;
+			
+			.menu-dropdown {
+				background-image: url('../../../assets/img/blackback.png');
+				
+				&.dropdown {
+					height: 4.4vh;
+					
+					.dropdown-menu {
+						width: 100%; 
+					}
+				}
+			}
+			
+			:not(.menu-dropdown) {
+				white-space: pre-wrap;
+			}
+				
+			.dropdown {
+				font-size: 22px;
+				background-position: 8.3% -4%;
+				height: 100%;
+				
+				fa {
+					margin-left: 6%;
+				}
+				
+				.dropdown-label {
+					margin-left: 20%;
+				}
+				
+				.dropdown-toggle {
+					font-size: 3vh;
+					
+					&::after {
+						display: none; 
+					}
+				}
+				
+				.dropdown-menu {
+					width: 243%;
+					min-width: unset;
+					background-image: url('../../../assets/img/redback.png');
+					background-position: 5%;
+					
+					.dropdown-item {
+						color: white; 
+					}
+				}
+			}
+			
+			.search {
+				height: 4.4vh;
+				background-image: url('../../../assets/img/blackback.png');
+				background-position: 8% -4%;
+				color: white;
+				
+				.fa-rotate {
+						transform: rotate(45deg);
+				}
+			}
+			
+			.navbar-options {
+				display: inline-flex;
+				background-image: url('../../../assets/img/redback.png');
+				background-position: 15% -4%;
+				width: 170%;
+				font-size: 3vh;
+				
+				div {
+					margin-left: 10%;
+				}
+			}
+			
+			.shopping {
+			    padding-left: 0.5vw;
+				padding-right: 0.5vw;
+				font-size: 1.4vw;
+				background-image: url('../../../assets/img/blackback.png');
+				background-position: 1% -4%;
+				left: 33%;
+			}
+			
+			.col-2 {
+				height: 4.5vh;
+				font-size: 2.9vh;
+			}
+			
+			.col-2, .col {
+				padding-left: 1%;
+				padding-right: 1%;
+				
+				&.navbar-col {
+					padding-right: 1.3%;
+				}
+			}
+		}
+	}
+}

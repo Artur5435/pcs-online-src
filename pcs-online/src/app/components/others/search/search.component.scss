@@ -1,0 +1,143 @@
+.page 
+{
+    text-align: center;
+    width: 100vw;
+    .form
+    {
+        margin: auto;
+        border: 2px solid #f84646;;
+        border-radius: 15px;
+        padding-bottom: 1vh;
+        display: inline block;
+        width: calc(60vw - 6px);
+        max-width: calc(60vw - 6px);
+        font-size: 2.5vh;
+        .dropdownContainer
+        {
+            br.bigger 
+            {
+                height: 4vh;
+                line-height: 4.2vh;
+            }
+            .horizLine
+            {
+                width: 6vw;
+                display: inline-block;
+                border: 1px solid black;
+            }
+            .vertLine
+            {
+                height: 4vh;
+                
+                display: block;
+                border: 1px solid black;
+                float: right;
+                margin-right: 16.75vw;
+            }
+            .dropdownS
+            {
+                display: inline-block;
+                text-align: center;
+                width: 20vw;
+                .drop 
+                {
+                    color: white;
+                    padding: 0;
+                    cursor: pointer;
+                    width: 100%;
+                    border: none;
+                    text-align: center;
+                }
+                input::-moz-placeholder
+                {
+                    opacity: 1;
+                }
+                input:-ms-input-placeholder
+                {
+                    opacity: 1;
+                }
+                input::-webkit-input-placeholder
+                {
+                    opacity: 1;
+                    color: white;
+                }
+                
+                .dropItems
+                {
+                    position: absolute;
+                    width: 20vw;
+                    overflow: auto;
+                    max-height: 0;
+                    z-index: 800;
+                    transition: all 0.3s ease-in-out;
+                    .item 
+                    {
+                        color: white;
+                        cursor: pointer;
+                        margin-top: 1vh;
+
+                    }
+                }
+                .dropItems.active
+                {
+                    max-height: 20vh;
+                }
+            }
+        }
+        .summary
+        {
+            display: table-row;
+            height: 15vh;
+            .cell 
+            {
+                display: table-cell;
+                text-align: center;
+                width: 29vw;
+                min-height: 15vh;
+                vertical-align: bottom;
+                img 
+                {
+                    max-width: 29vw;
+                    max-height: 15vh;
+                }
+                p 
+                {
+                    
+                }
+                .bgBlack
+                {
+                    opacity: 0.6;
+                    font-size: 3vh;
+                    margin-right: 0.5vw;
+                    margin-left: 0.5vw;
+                    
+                }
+                .bgBlack.aval
+                {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.partners
+{
+    position: absolute;
+    bottom: 4vh;
+    width: 100vw;
+    p 
+    {
+        font-size: 1.8vh;
+    }
+    .holder 
+    {
+        border-bottom: 1px solid #f84646;
+        border-top: 1px solid #f84646;
+        img 
+        {
+            margin: auto;
+            max-height: 10vh;
+        }
+    }
+}

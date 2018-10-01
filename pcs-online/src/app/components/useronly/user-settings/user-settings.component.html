@@ -1,0 +1,47 @@
+<div class="settingsPanel">
+
+  <div class="container">
+    <div class="header bgBlack">
+      <p class="title bgRed">
+        USTAWIENIA
+      </p>
+    </div>
+    <div class="inputs">
+      <div class="label">
+        <p class="infoForm">Imię:</p>
+        <input class="pcsInputField" id="FirstName" [(ngModel)]='userData.FirstName' />
+      </div>
+      <div class="label">
+        <p class="infoForm">Nazwisko:</p>
+        <input class="pcsInputField" id="LastName" [(ngModel)]='userData.LastName' />
+      </div>
+      <div class="label">
+        <p class="infoForm">Miasto:</p>
+        <input class="pcsInputField" id="City" [(ngModel)]='userData.City' />
+      </div>
+      <div class="label">
+        <p class="infoForm">Ulica:</p>
+        <input class="pcsInputField" id="Street" [(ngModel)]='userData.Street' />
+      </div>
+      <div class="label">
+        <p class="infoForm">NIP:</p>
+        <input class="pcsInputField" id="NIP" [(ngModel)]='userData.NIP' />
+      </div>
+      <div class="label">
+        <p class="infoForm">Kod pocztowy:</p>
+        <input class="pcsInputField" id="PostalCode" [(ngModel)]='userData.PostalCode' />
+      </div>
+      <div class="label">
+        <p class="infoForm">Numer domu:</p>
+        <input class="pcsInputField" id="HouseNum" [(ngModel)]='userData.HouseNum' />
+      </div>
+      <div class="label">
+        <p class="infoForm">Numer lokalu:</p>
+        <input class="pcsInputField" id="AppartmentNum" [(ngModel)]='userData.AppartmentNum' />
+      </div>
+      <button  class="bgRed" (click)="Save()">
+        <p class="button ">Zapisz</p>
+      </button>
+    </div>
+  </div>
+</div>

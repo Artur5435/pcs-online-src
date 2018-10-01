@@ -1,0 +1,26 @@
+.form
+{
+    .container 
+    {
+        .holder 
+        {
+            padding: 1vh 1vw;
+            p 
+            {
+                font-size: 2vh;
+            }
+            a 
+            {
+                padding-left: 1vw;
+                padding-right: 1vw;
+                border-radius: 10px;
+            }
+            a.bgBlack:hover 
+            {
+                text-decoration: underline;
+                color: white;
+            }
+        }
+    }
+    
+}

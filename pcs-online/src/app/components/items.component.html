@@ -1,0 +1,109 @@
+<div class="form">
+  <div class="container">
+    <div class="header bgBlack">
+      <p id="Title" class="title bgRed">
+        OLEJE - KLASA EKONOMICZNA
+      </p>
+      <div class="dropdownSort">
+        <div class="drop bgRed">
+          <p>SORTUJ WEDŁUG</p>
+        </div>
+        <div class="dropItems bgBlack">
+          <p class="item" (click)="SortBy('CR')">Cena Rosnąco</p>
+          <p class="item" (click)="SortBy('CM')">Cena Malejąco</p>
+          <p class="item" (click)="SortBy('NR')">Nazwa A-Z</p>
+          <p class="item" (click)="SortBy('NM')">Nazwa Z-A</p>
+          <p class="item" (click)="SortBy('M')">Marka</p>
+        </div>
+      </div>
+    </div>
+    <div [@listStagger]="this.items" class="products">
+      <div class="popUpProduct">
+        <div class="imageContainer">
+          <img class="productImage" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg">
+        </div>
+        <div class="info">
+          <div class="bgBlack infoT" *ngIf="item.ID">
+            <p class="">KOD PRODUKTU:</p>
+            <p class="data bgRed">{{item.ID}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.Producent">
+            <p class="">PRODUCENT:</p>
+            <p class="data bgRed">{{item.Producent}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.Nazwa">
+            <p class="">NAZWA PRODUKTU:</p>
+            <p class="data bgRed">{{item.Nazwa}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.TypProduktu">
+            <p class="">TYP PRODUKTU:</p>
+            <p class="data bgRed">{{item.TypProduktu}}</p>
+          </div>
+
+          <div class="bgBlack infoT" *ngIf="item.CenaBrutto">
+            <p class="">CENA PRODUKTU:</p>
+            <p class="data bgRed">{{item.CenaBrutto}},-</p>
+          </div>
+          <div class="description" *ngIf="item.Opis">
+            <p class="bgBlack head">OPIS:</p>
+            <br>
+            <p>{{item.Opis}}</p>
+          </div>
+          <div class="foot">
+            <div class="countContainer bgBlack">
+              <div (click)="SubCount()" class="sub bgRed">
+                -
+              </div>
+
+              <div class="count">{{this.popedCount}}</div>
+              <div (click)="AddCount()" class="add bgRed">
+                +
+              </div>
+              <div class="">
+                x
+              </div>
+              <div class="">
+                {{item.CenaBrutto}},-
+              </div>
+              <div class="">
+                =
+              </div>
+              <div class="">
+                {{item.CenaBrutto*this.popedCount}},-
+              </div>
+            </div>
+            <div class="button" (click)="AddToCartPop(this.popedIndex, this.popedCount)">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+          <div (click)="closePopUp()" class="close">
+            x
+          </div>
+        </div>
+      </div>
+      <div  class="product" *ngFor="let item of items; let i = index; trackBy: trackItem" >
+        <div class="header" (click)="popUpSet(i)">
+          <p class="producent bgBlack">{{item.Producent}}</p>
+          <i class="fas fa-info details bgRed" (click)="popUpSet(i)"></i>
+        </div>
+        <div class="info">
+          <div class="imageHolder" (click)="popUpSet(i)">
+            <img class="image" src="assets/Products/{{item.Producent}}/{{item.ID}}.jpg" />
+          </div>
+          <div class="description">
+            <p class="price">{{item.CenaBrutto}},-</p>
+            <div class="infoBot">
+              <p class="additional">{{item.Nazwa}}</p>
+              <div class="button" (click)="AddToCart(i)">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

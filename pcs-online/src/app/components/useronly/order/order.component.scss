@@ -1,0 +1,236 @@
+.loginPanel
+{
+    text-align: center;
+    
+    .container 
+    {
+        border: 2px solid #f84646;
+        display: inline-block;
+        width: fit-content;
+        border-radius: 0 0 15px 15px;
+        border-top: none;
+        padding: 0;
+        width: 60vw;
+        .header
+        {
+            position: relative;
+            background-color: black;
+            width: calc(100% + 4px);
+            margin-left: -2px;
+            text-align: left;
+            height: 3vh;
+            .title 
+            {
+                
+                padding:  0.5vh 0.5vw;
+                display: inline-block;
+                font-size: 2vh;
+                background-color: #f84646;
+                line-height: 1;
+                position: relative;
+                vertical-align: top;
+            }
+        }
+        .left
+        {
+            width: 60%;
+            display: inline-block;
+            vertical-align: top;
+            .cart
+            {
+                width: 100%;
+                display: inline-block;
+                max-height: 7vw;
+                overflow: auto;
+                margin-top: 2vh;
+                border-spacing: 0 1vh;
+                border-bottom: 1px solid black;
+                vertical-align: top;
+                .item
+                {
+                    display:table-row;
+                    width: 100%;
+                    height: 3vh;
+                    border: 1px solid black;
+                    .number
+                    {
+                        display: table-cell;
+                        font-size: 3vh;
+                        border: 1px solid black;
+                        
+                        width: 3vh;
+                        line-height: 3vh;
+                    }
+                    .name
+                    {
+                        display: table-cell;
+                        vertical-align: middle;
+                        //width: 75%;
+                        background-color: black;
+                        color: white;
+                        padding-right: 0.3vw;
+                        padding-left: 0.3vw;
+                        .type 
+                        {
+                            display: inline-block;
+                            float: left;
+                            padding-right: 0.5vw;
+                        }
+                        .id 
+                        {
+                            display: inline-block;
+                            background-color: #f84646;
+                            border-radius: 10px;
+                            float: right;
+                            position: relative;
+                            padding-left: 0.5vw;
+                            padding-right: 0.5vw;
+                            
+                        }
+                        
+                    }
+                    .quantity 
+                    {
+                        display: table-cell;
+                        font-size: 2vh;
+                        border: 1px solid black;
+                        
+                        width: 3vh;
+                        line-height: 3vh;
+                    }
+                    .price 
+                    {
+                        display: table-cell;
+                        font-size: 2vh;
+                        border: 1px solid black;
+                        padding-left: 2vw;
+                            padding-right: 0.5vw;
+                        width: 3vh;
+                        line-height: 3vh;
+                    }
+                    .delete 
+                    {
+                        display: table-cell;
+                        font-size: 2vh;
+                        cursor: pointer;
+                        width: 3vh;
+                        line-height: 3vh;
+                    }
+                }
+            }
+            .przesylka
+            {
+                margin-top: 1vh;
+                
+                width: 100%;
+                text-align: left;
+                .typ
+                {
+                    display: block;
+                    width: 80%;
+                    border-radius: 15px;
+                    color: white;
+                    margin-bottom: 1vh;
+                    padding-left: 0.5vw;
+                    padding-right: 0.5vw;
+                    font-size: 1.8vh;
+                    .chosen
+                    {
+                        transition: all 0.3s ease-in-out;
+                        margin-top: 0.5vh;
+                        height: 2vh;
+                        width: 2vh;
+                        background: black;
+                        border: 1px solid white;
+                        border-radius: 1vh;
+                        float: right;
+                        cursor: pointer;
+                    }
+                    .chosen:hover
+                    {
+                        background: white;
+                    }
+                    .chosen.active
+                    {
+                        background: white;
+                    }
+                }
+            }
+            .suma
+            {
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+                text-align: right;
+                border-bottom: 1px solid black;
+                p 
+                {
+                    display: inline-block;
+                    font-size: 2.5vh;
+                }
+                .kwota
+                {
+                    font-size: 3vh;
+                }
+            }
+        }
+        .dataForm
+        {
+            width: 39%;
+            display: inline-block;
+            .inputs 
+            {
+                padding: 2vh 2vw;
+                border-spacing: 1vw 1vh;
+                .label 
+                {
+                    margin-bottom: 1vh;
+                    width: 100%;
+                    height: fit-content;
+                    //display: table-row;
+                    .infoForm 
+                    {
+                        width: min-content;
+                        text-align: left;
+                        display: inline-block;
+                        min-width: 37%;
+                        
+                        font-size: 1.6vh;
+                    }
+                    .pcsInputField 
+                    {
+                        width: max-content;
+                        font-family: "Grot";
+                        position: relative;
+                        float:right;
+                        display: inline-block;
+                        vertical-align: bottom;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+
+button 
+{
+    
+    
+    display: inline-block;
+    border:none;
+    background-color: #f84646;
+    padding: 0.5vh 0.5vw;
+    cursor: pointer;
+    float: right;
+    .button
+    {
+        color: white;
+        font-family: "Grot";
+    }
+}
+.send 
+{
+    margin-top: 1vh;
+    margin-right: 2vw;
+}

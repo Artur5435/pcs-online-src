@@ -1,0 +1,102 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+    font-family: 'Grot';
+    src: url('/assets/Fonts/GetVoIPGrotesque.ttf') format('truetype');
+ }
+
+ @font-face {
+    font-family: 'GrotI';
+    src: url('/assets/Fonts/GetVoIPGrotesqueItalic.ttf') format('truetype');
+ }
+
+ @font-face {
+    font-family: 'FuturaCondM';
+    src: url('/assets/Fonts/FuturaCondensedMedium.otf') format('truetype');
+ }
+
+ html 
+ {
+     overflow-x: hidden;
+     min-height: 100vh;
+ }
+
+ p, a, i 
+ {
+     font-family: "Grot";
+     margin:0;
+     font-size: 2vh;
+ }
+
+ .redCol
+ {
+     color: #f84646;
+ }
+
+
+body {
+    margin: 0;
+    font-family: "Grot";
+}
+
+
+
+.bgRed 
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('/assets/img/redback.jpg');
+    color: white;
+}
+
+
+
+.bgBlack 
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('/assets/img/blackback.jpg');
+    color: white;
+}
+
+
+.form 
+{
+    text-align: center;
+    padding-bottom: 5vh;
+}
+.form .container 
+{
+    padding: 0;
+    width: calc(75vw - 6px);
+    max-width: calc(75vw - 6px);
+    border: 2px solid #f84646 ;
+    border-top: none;
+    box-sizing: unset;
+    border-radius: 0px 0px 15px 15px;
+}
+.form .container .header
+{
+    position: relative;
+    background-color: black;
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    text-align: left;
+    height: 3vh;
+}
+.form .container .header .title 
+{    
+    padding:  0.5vh 0.5vw;
+    display: inline-block;
+    font-size: 2vh;
+    background-color: #f84646;
+    line-height: 1;
+    position: relative;
+    vertical-align: top;
+}
+        

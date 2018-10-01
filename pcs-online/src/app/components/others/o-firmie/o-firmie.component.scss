@@ -1,0 +1,39 @@
+.form
+{
+    .container 
+    {
+        .topTxt
+        {
+            margin-bottom: 2vh;
+
+        }
+        .infoTxt
+        {
+            color: white;
+            border-radius: 15px;
+            font-size: 1.8vh;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            margin-bottom: 1vh;
+            margin-right: 0.5vw;
+            display: inline-block;
+            cursor: pointer;
+        }
+        img 
+        {
+            margin-bottom: 2vh;
+            margin-top: 2vh;
+        }
+        
+        .bottomTxt
+        {
+            font-size: 1.8vh;
+        }
+    }
+    
+}
+
+.clickable
+{
+    cursor: pointer;
+}

@@ -1,0 +1,111 @@
+<div class="page">
+  <div class="form">
+
+    <p class="redCol">SKORZYSTAJ Z NOWEGO STANDARDU WYSZUKIWANIA PCS</p>
+    <p class="">DOBIERZ NAJLEPSZY OLEJ DO TWOJEGO SAMOCHODU</p>
+
+    <div class="dropdownContainer">
+      <!--<div class="dropdown">
+        <input id="markav2" class="drop bgBlack" style="text-transform:uppercase" placeholder="MARKA">
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let marka of ParseMarka(); let i = index" (click)="SelectMarkav2(i)">
+            {{marka}}
+          </p>
+        </div>
+      </div>
+
+      <div class="horizLine"></div>
+      <div class="dropdown">
+        <input id="modelv2" class="drop bgBlack" placeholder="MODEL">
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let model of ParseModel(); let i = index" (click)="SelectModelv2(i)">
+            {{model}}
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="vertLine"></div>
+      <br class="bigger">
+      <div class="dropdown">
+        <input id="silnikv2" class="drop bgBlack" placeholder="SILNIK">
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let silnik of ParseSilnik(); let i = index" (click)="SelectSilnikv2(i)">
+            {{silnik}}
+          </p>
+        </div>
+      </div>
+      <div class="horizLine"></div>
+      <div class="dropdown">
+        <input id="rocznikv2" class="drop bgBlack" placeholder="ROK PRODUKCJI" type="text">
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let rocznik of ParseRocznik(); let i = index" (click)="SelectRocznikv2(i)">
+            {{rocznik}}
+          </p>
+        </div>
+      </div>-->
+      <div class="dropdownS">
+        <div id="markav2" class="drop bgBlack" style="text-transform:uppercase">MARKA</div>
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let marka of this.markiv2.Marki; let i = index" (click)="SelectMarkav2(i)">
+            {{marka}}
+          </p>
+        </div>
+      </div>
+
+      <div class="horizLine"></div>
+      <div class="dropdownS">
+        <div id="modelv2" class="drop bgBlack">MODEL</div>
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let model of this.modelev2.Modele; let i = index" (click)="SelectModelv2(i)">
+            {{model}}
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="vertLine"></div>
+      <br class="bigger">
+      <div class="dropdownS">
+        <div id="silnikv2" class="drop bgBlack">SILNIK</div>
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let silnik of this.silnikiv2.Silniki; let i = index" (click)="SelectSilnikv2(i)">
+            {{silnik}}
+          </p>
+        </div>
+      </div>
+      <div class="horizLine"></div>
+      <div class="dropdownS">
+        <div id="rocznikv2" class="drop bgBlack">ROK PRODUKCJI</div>
+        <div class="dropItems bgRed">
+          <p class="item" *ngFor="let rocznik of this.rocznikiv2.Roczniki; let i = index" (click)="SelectRocznikv2(i)">
+            {{rocznik}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="summary">
+      <div class="cell">
+        <img src = "../../../../assets/img/car.png" *ngIf="!this.carv2.Marka" alt="samochod">
+        <img src = "../../../../assets/MARKI/{{this.carv2.Marka}}.jpg" *ngIf="this.carv2.Marka" alt="samochod">
+      </div>
+      <div class="cell">
+        <p class="redCol">TWOJE DANE SAMOCHODU:</p>
+         <p *ngIf="this.carv2.Marka">MARKA: {{this.carv2.Marka}}</p>
+         <p *ngIf="this.carv2.Model">MODEL: {{this.carv2.Model}}</p>
+         <p *ngIf="this.carv2.Silnik">SILNIK: {{this.carv2.Silnik}}</p>
+         <p *ngIf="this.carv2.Rocznik">ROCZNIK: {{this.carv2.Rocznik}}</p>
+         <p class="bgBlack aval" routerLink="/wynik" *ngIf="this.carv2.Marka &&  this.carv2.Model && this.carv2.Silnik && this.carv2.Rocznik">KONTYNUUJ</p>
+         <p class="bgBlack "  *ngIf="!(this.carv2.Marka &&  this.carv2.Model && this.carv2.Silnik && this.carv2.Rocznik)">UZUPEŁNIJ DANE</p>
+      </div>
+    </div>
+  </div>
+  <div class="partners">
+    <p class="redCol">WSPÓŁPRACUJĄ Z NAMI</p>
+    <div class="holder">
+      <img src="../../../../assets/Partnerzy/eneos.png" alt="eneos">
+      <img src="../../../../assets/Partnerzy/valvoline.png" alt="valvoline">
+      <img src="../../../../assets/Partnerzy/millers.png" alt="millers">
+      <img src="../../../../assets/Partnerzy/elf.png" alt="elf">
+      <img src="../../../../assets/Partnerzy/motul.png" alt="motul">
+    </div>
+  </div>
+</div>

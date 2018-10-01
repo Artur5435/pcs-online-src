@@ -1,0 +1,190 @@
+<!-->
+<div style="text-align:center">
+  <h2>Opcje menu: </h2>
+  <p>
+    <a routerLink="/filtry">FILTRY</a><br>
+  <a routerLink="/akcesoria">akcesoria</a><br>
+  <a routerLink="/oleje">oleje</a><br>
+  <a routerLink="/wycieraczki">wycieraczki</a><br>
+  <a routerLink="/login">login</a><br>
+  <a routerLink="/register">register</a><br>
+  <a routerLink="/regulamin">regulamin</a><br>
+  <a routerLink="/o-firmie">o-firmie</a><br>
+  <a routerLink="/search">search</a><br>
+  <a routerLink="/dostawy">dostawy</a><br>
+  <a routerLink="/sklep-stacjonarny">sklep-stacjonarny</a><br>
+  <a routerLink="/kontakt">kontakt</a><br>
+  <a routerLink="/zamowienie">kontakt</a><br>
+  <a routerLink="/ustawienia">kontakt</a><br>
+  </p>
+
+ <div class="cart" *ngFor="let item of this.itemService.cart; let i = index; trackBy: trackItem">
+    <h5 class="brand" (click)="Remove(i)">{{item.ID}}</h5>
+    <div class="type-name">
+      <p class="type-name-label">{{item.Typ}}</p>
+    </div>
+    <div class="description">
+      <p class="price">{{item.Cena}},-</p>
+    </div>
+  </div>
+-->
+<div id='header'>
+<div  class="row header-table">
+  <div class="col-2" >
+
+  </div>
+
+  <div class="col-8" id='main-logo'>
+    <img src="../../../assets/img/logo.png">
+  </div>
+
+  <div class="col-2">
+    <div id="user-panel">
+        <div id="upper">
+            PNAEL KLIENTA PCS
+          </div>
+          <div *ngIf="!this.userService.user['0']" routerLink="/logowanie" id="bottom">
+            <span class="pointer">ZALOGUJ</span>
+          </div>
+          <div *ngIf="this.userService.user['0']" routerLink="/ustawienia" id="bottom">
+            USTAWIENIA
+          </div>
+    </div>
+      <div *ngIf="!this.userService.user['0']" id="register">
+        Nie masz konta ?<br>
+        <b class="pointer" routerLink="/rejestracja">ZAREJESTRUJ SIĘ</b>
+      </div>
+      <div *ngIf="this.userService.user['0']" id="register">
+        <b (click)="Logout()">WYLOGUJ SIĘ</b>
+      </div>
+  </div>
+</div>
+
+<hr>
+
+  <div id="bottom-panel">
+    <div class="bottom-panel-item">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-google-plus-g"></i>
+    </div>
+    <div class="bottom-panel-item-center">
+      NOWY STANDARD MOTORYZACJI
+    </div>
+    <div class="bottom-panel-item">
+      <div id="trust">
+        ZAUFAŁO NAM JUŻ: 11295 KLIENTÓW
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row menu-bar">
+      <div class=col-1 id="menu-dropdown">
+        <div  id="menu-btn" class="nav-btn dropdown show">
+          <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            MENU
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" routerLink="/o-firmie">O FIRMIE</a>
+            <a class="dropdown-item" routerLink="/partnerzy">PARTNERZY</a>
+            <a class="dropdown-item" routerLink="/regulamin">REGULAMIN</a>
+            <a class="dropdown-item" routerLink="/kontakt">KONTAKT</a>
+            <a class="dropdown-item" routerLink="/dostawy">DOSTAWY</a>
+            <a class="dropdown-item" routerLink="/sklep-stacjonarny">SKLEP<br>STACJONARNY</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-1" id="search">
+          <i class="fas fa-search"></i>
+      </div>
+      <div id="mid-col" class="col-8">
+          <nav  id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+              <button id="menu-nav-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="width: 100%">
+                  <li class="nav-item">
+                    <div id="oil-btn" class="nav-btn dropdown show">
+                      <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        OLEJE
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/oleje-eko">Klasa ekonomiczna</a>
+                        <a class="dropdown-item" routerLink="/oleje-srednia">Klasa średnia</a>
+                        <a class="dropdown-item" routerLink="/oleje-premium">Klasa premium</a>
+                        <a class="dropdown-item" routerLink="/oleje-sport">Klasa sport</a>
+                        <a class="dropdown-item" routerLink="/oleje-przekladniowe">Oleje przekładniowe</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div  id="filters-btn" class="nav-btn dropdown show">
+                      <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        FILTRY
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/filtry-powietrza">Filtry Powietrza</a>
+                        <a class="dropdown-item" routerLink="/filtry-paliwa">Filtry Paliwa</a>
+                        <a class="dropdown-item" routerLink="/filtry-kabiny">Filtry Kabiny</a>
+                        <a class="dropdown-item" routerLink="/filtry-oleju">Filtry Oleju</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div  id="accesories-btn" class="nav-btn dropdown show">
+                      <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AKCESORIA
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/wycieraczki">Wycieraczki</a>
+                        <a class="dropdown-item" routerLink="/ledy">Oświetlenie LED</a>
+                        <a class="dropdown-item" routerLink="/zapachy">Zapachy</a>
+                        <a class="dropdown-item" routerLink="/kosmetyki">Kosmetyki</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+      </div>
+      <div class="col-2"  id="carret-btn">
+        <span id="visibility-carret-btn">TWÓJ KOSZYK</span>
+        <div id="carret">
+          <div id="conector">
+            
+          </div>
+          <div id="your-carret">
+            <div id="carret-title">
+              TWOJE ZAKUPY
+            </div>
+            <div id="carret-content">
+              <div class="cart" *ngFor="let item of this.itemService.cart; let i = index; trackBy: trackItem">
+                <div id="left">
+                  <div class="brand">{{item.ID}} - {{item.Ilosc}} sztuk</div>
+                  <div class="type-name">
+                    <div class="type-name-label">{{item.Typ}}</div>
+                  </div>
+                </div>
+                <div id="right" class="description">
+                    <div class="price">{{item.CenaBrutto * item.Ilosc}},-</div>
+                  <i class="fas fa-trash-alt" (click)="Remove(i)"></i>
+                  
+                </div>
+
+              </div>
+            </div>
+            <div class="bgBlack">
+              <span routerLink="/zamowienie" *ngIf="this.itemService.cart.length">ZAMAWIAM</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

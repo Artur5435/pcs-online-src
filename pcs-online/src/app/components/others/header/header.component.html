@@ -1,0 +1,210 @@
+<!-->
+<div style="text-align:center">
+  <h2>Opcje menu: </h2>
+  <p>
+    <a routerLink="/filtry">FILTRY</a>
+    <br>
+    <a routerLink="/akcesoria">akcesoria</a>
+    <br>
+    <a routerLink="/oleje">oleje</a>
+    <br>
+    <a routerLink="/wycieraczki">wycieraczki</a>
+    <br>
+    <a routerLink="/login">login</a>
+    <br>
+    <a routerLink="/register">register</a>
+    <br>
+    <a routerLink="/regulamin">regulamin</a>
+    <br>
+    <a routerLink="/o-firmie">o-firmie</a>
+    <br>
+    <a routerLink="/search">search</a>
+    <br>
+    <a routerLink="/dostawy">dostawy</a>
+    <br>
+    <a routerLink="/sklep-stacjonarny">sklep-stacjonarny</a>
+    <br>
+    <a routerLink="/kontakt">kontakt</a>
+    <br>
+    <a routerLink="/zamowienie">kontakt</a>
+    <br>
+    <a routerLink="/ustawienia">kontakt</a>
+    <br>
+  </p>
+
+  <div class="cart" *ngFor="let item of this.itemService.cart; let i = index; trackBy: trackItem">
+    <h5 class="brand" (click)="Remove(i)">{{item.ID}}</h5>
+    <div class="type-name">
+      <p class="type-name-label">{{item.Typ}}</p>
+    </div>
+    <div class="description">
+      <p class="price">{{item.Cena}},-</p>
+    </div>
+  </div>
+  -->
+  <div id='header'>
+    <div class="head bgBlack">
+      <img src="../../../../assets/img/logo.png" alt="logo">
+      <div class="user">
+        <div class="login">
+          <p class="white">
+            PANEL KLIENTA PCS
+          </p>
+          <p *ngIf="!this.userService.user[0]" class="black przy" routerLink="/logowanie">
+            ZALOGUJ
+          </p>
+          <p *ngIf="this.userService.user[0]" class="black przy" routerLink="/ustawienia">
+            USTAWIENIA
+          </p>
+        </div>
+        <div *ngIf="!this.userService.user[0]" class="register">
+          <p class="">
+            Nie masz konta?
+          </p>
+          <p class="red"  routerLink="/rejestracja">
+            ZAREJESTRUJ SIĘ
+          </p>
+        </div>
+      </div>
+      <div class="horLine"></div>
+      <p class="title">
+        NOWY STANDARD MOTORYZACJI
+      </p>
+      <div class="social">
+          <a href="https://www.facebook.com/PolskieCentrumSamochodowe/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="horLineBG bgRed"></div>
+    </div>
+    <div class="menu">
+      <div class="dropdown">
+        <div class="drop bgBlack">
+          <i class="fas fa-bars"></i>
+          <p>MENU</p>
+        </div>
+        <div class="dropItems bgRed">
+          <p class="item" routerLink="/o-firmie">
+            O FIRMIE
+          </p>
+          <p class="item" routerLink="/partnerzy">
+            PARTNERZY
+          </p>
+          <p class="item" routerLink="/regulamin">
+            REGULAMIN
+          </p>
+          <p class="item" routerLink="/kontakt">
+            KONTAKT
+          </p>
+          <p class="item" routerLink="/dostawy">
+            DOSTAWY
+          </p>
+          <p class="item" routerLink="/sklep-stacjonarny">
+            SKLEP
+            <br> STACJONARNY
+          </p>
+        </div>
+      </div>
+      <div class="search bgBlack" routerLink="/szukaj">
+        <div class="holder">
+          <i class="fas fa-search"></i><p>SZUKAJ</p>
+        </div>
+      </div>
+      <div class="products">
+        <div class="holder bgRed">
+          <div class="dropdownI">
+            <div class="drop">
+              <p>OLEJE</p>
+            </div>
+            <div class="dropItems bgRed">
+              <p class="item" routerLink="/oleje-eko">
+                KLASA
+                <br> EKONOMICZNA
+              </p>
+              <p class="item" routerLink="/oleje-srednia">
+                KLASA
+                <br> ŚREDNIA
+              </p>
+              <p class="item" routerLink="/oleje-premium">
+                KLASA
+                <br> PREMIUM
+              </p>
+              <p class="item" routerLink="/oleje-sport">
+                KLASA
+                <br> SPORT
+              </p>
+              <p class="item" routerLink="/oleje-przekladniowe">
+                OLEJE
+                <br> PRZEKŁADNIOWE
+              </p>
+            </div>
+          </div>
+          <div class="dropdownI">
+            <div class="drop">
+              <p>FILTRY</p>
+            </div>
+            <div class="dropItems bgRed">
+              <p class="item" routerLink="/filtry-paliwa">
+                FILTRY
+                <br> PALIWA
+              </p>
+              <p class="item" routerLink="/filtry-powietrza">
+                FILTRY
+                <br> POWIETRZA
+              </p>
+              <p class="item" routerLink="/filtry-kabiny">
+                FILTRY
+                <br> KABINY
+              </p>
+              <p class="item" routerLink="/filtry-oleju">
+                FILTRY
+                <br> OLEJU
+              </p>
+            </div>
+          </div>
+          <div class="dropdownI">
+            <div class="drop" routerLink="/wycieraczki">
+              <p>WYCIERACZKI</p>
+            </div>
+
+          </div>
+          <div class="dropdownI">
+            <div class="drop">
+              <p>AKCESORIA</p>
+            </div>
+            <div class="dropItems bgRed">
+              <p class="item" routerLink="/kosmetyki">
+                KOSMETYKI
+              </p>
+              <p class="item" routerLink="/zapachy">
+                ZAPACHY
+              </p>
+              <p class="item" routerLink="/ledy">
+                OŚWIETLENIE
+                <br> LED
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <div class="dropdownC">
+          <div class="drop bgBlack">
+            <p>TWÓJ KOSZYK</p>
+          </div>
+          <div *ngIf="this.itemService.cart.length" class="vertLine"></div>
+          <div *ngIf="this.itemService.cart.length" class="dropItems active">
+
+            <div class="item" *ngFor="let itemC of this.itemService.cart; let i = index; trackBy: trackItem">
+              <p class="name">{{itemC.Nazwa}}</p>
+              <p class="cost">{{itemC.Ilosc * itemC.CenaBrutto}},-</p>
+              <br>
+              <p class="quantity">sztuk {{itemC.Ilosc}}</p>
+              <p class="remove" (click)="Remove(i)">x</p>
+            </div>
+            <p class=" order bgBlack" routerLink="/zamowienie">
+              ZAMAWIAM
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

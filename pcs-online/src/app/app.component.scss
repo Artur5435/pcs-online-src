@@ -1,0 +1,37 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+.form 
+{
+    text-align: center;
+    padding-bottom: 5vh;
+    .container 
+    {
+        padding: 0;
+        width: calc(75vw - 6px);
+        max-width: calc(75vw - 6px);
+        border: 2px solid #f84646 ;
+        border-top: none;
+        box-sizing: unset;
+        border-radius: 0px 0px 15px 15px;
+        .header
+        {
+            position: relative;
+            background-color: black;
+            width: calc(100% + 4px);
+            margin-left: -2px;
+            text-align: left;
+            height: 3vh;
+            .title 
+            {
+                
+                padding:  0.5vh 0.5vw;
+                display: inline-block;
+                font-size: 2vh;
+                background-color: #f84646;
+                line-height: 1;
+                position: relative;
+                vertical-align: top;
+            }
+           
+        }
+    }
+}

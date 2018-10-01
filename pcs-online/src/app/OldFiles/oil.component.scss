@@ -1,0 +1,98 @@
+.oil {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    
+
+    .search-window {
+        position: fixed;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        border: 2px solid red;
+		border-top: 0;
+		border-radius: 15px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+        margin-top: 2.5%;
+		color: white;
+		z-index: -1;
+		
+		.title {
+			display: flex;
+			
+			.step {
+				background-image: url('../../../assets/img/blackback.png');
+				padding-right: 2%;
+				padding-left: 2%;
+			}
+			
+			:not(.step) {
+				background-image: url('../../../assets/img/redback.png');
+				padding-left: 2%;
+				width: 87.4%
+			}
+		}
+		
+		.container {
+			padding: 0;
+			margin-left: 3%;
+			width: 94%;
+			
+			.oil {
+				border: 2px solid black;
+				width: 29.5%;
+				margin-left: 3%;
+				margin-bottom: 1%;
+				height: 216px;
+				
+				.brand {
+					text-align: right;
+					padding-right: 5%;
+					margin-bottom: 0;
+					background-image: url('../../../assets/img/blackback.png');
+				}
+				
+				.type-name {
+					height: 10%;
+					font-size: 0.7rem;
+					font-weight: 500;
+					background-image: url('../../../assets/img/redback.png');
+					border-radius: 5px;
+					width: 39%;
+					text-align: center;
+					margin-top: -4%;
+					
+					.type-name-label {
+						position: relative;
+						top: 2px;
+						margin-left: 1.5%;
+					}
+				}
+				
+				.filter-image {
+					text-align: center;
+				}
+				
+				.description {
+					color: black;
+					font-weight: bold;
+					
+					.price {
+					    text-align: right;
+						margin-right: 9%;
+						margin-left: 9%;
+						margin-bottom: 0;
+						border-bottom: 2px solid black;
+					}
+					
+					.description-label {
+						padding-bottom: 0;
+						text-align: center;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

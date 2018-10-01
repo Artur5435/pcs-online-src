@@ -1,0 +1,383 @@
+#header 
+{   
+    
+    text-align: center;
+    padding-bottom: 2vh;
+    .head
+    {
+        padding-top: 2vh;
+        margin-bottom: 1vh;
+        img 
+        {
+            height: 8vh;
+        }
+        .horLine
+        {
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            border-bottom: 1px solid white;
+        }
+        .title 
+        {
+            font-family: 'FuturaCondM';
+            font-size: 4.5vh;
+        }
+        .social 
+        {
+            position: absolute;
+            margin-top: -5.5vh;
+            left: 2vw;
+            i 
+            {
+                color: white;
+                font-size: 4.5vh;
+            }
+        }
+        .user 
+        {
+            position: absolute;
+            float: right;
+            right: 1vw;
+            top: 2vh;
+            .login 
+            {
+                
+                p 
+                {
+                    font-size: 1.5vh;
+                }
+                .white
+                {
+                    background: white;
+                    color: black;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    border-radius: 15px 15px 0 0;
+                }
+                .black 
+                {
+                    border-radius: 0 0 15px 15px;
+                    border: 1px solid white;
+                }
+                .przy 
+                {
+                    cursor: pointer;
+                }
+            }
+            .register 
+            {
+                padding-top: 1vh;
+                p 
+                {
+                    font-size: 1.5vh;
+                    margin: 0;
+                    line-height: 1;
+                }
+                .red 
+                {
+                    color: #f84646;
+                    cursor: pointer;
+                }
+            }
+        }
+        .horLineBG 
+        {
+            height: 0.5vh;
+        }
+    }
+    .menu
+    {
+        text-align: left;
+        width: 100vw;
+        //display: table-row;
+        display: inline-block;
+        
+        .dropdown
+        {
+            display: table-cell;
+            display: inline-block;
+            text-align: left;
+            width: 12%;
+            padding-left: 0.5vw;
+            padding-right: 0.5vw;
+            height: 3vh;
+            vertical-align: top;
+            position: relative;
+            .drop 
+            {
+                color: white;
+                padding: 0;
+                cursor: pointer;
+                padding-left: 0.5vw;
+                padding-right: 0.5vw;
+                border: none;
+                text-align: center;
+                height: 3vh;
+                i, p 
+                {
+                    display: inline-block;
+                        
+                }
+                i 
+                {
+                    font-size: 2.5vh;
+                    margin-left: 0.25vh;
+                    margin-top: 0.25vh;
+                    line-height: 1;
+                    position: relative;
+                    vertical-align: top;
+                }
+                p 
+                {
+                    margin-left: 1.5vw;
+                    font-size: 2.5vh;
+                    line-height: 1;
+                    margin-top: 0.25vh;
+                    position: relative;
+                    vertical-align: top;
+                }
+            }
+                
+            .dropItems
+            {
+                position: absolute;
+                width: 11vw;
+                overflow: auto;
+                height: 0;
+                z-index: 800;
+                transition: all 0.3s ease-in-out;
+                text-align: left;
+                padding-left: 0.5vw;
+                .item 
+                {
+                    color: white;
+                    cursor: pointer;
+                    margin-top: 1vh;
+                    font-size: 1.5vh;
+                }
+                .item:hover 
+                {
+                    text-decoration: underline;
+                }
+            }
+            .dropItems.active
+            {
+                height: fit-content;
+            }
+        }
+        .search 
+        {
+            width: 8%;
+            //display: table-cell;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            cursor: pointer;
+            height: 3vh;
+            .holder 
+            {
+                display: inline-block;
+                position: relative;
+                vertical-align: top;
+                height: 100%;
+                width: 100%;
+                i 
+                {
+                    width: 20%;
+                    
+                    margin-left: 0.25vh;
+                    margin-top: 0.25vh;
+                    line-height: 1;
+                    position: relative;
+                    vertical-align: top;
+                }
+                p 
+                {
+                    margin-top: 0.5vh;
+                    display: inline-block;
+                    vertical-align: top;
+                    line-height: 1;
+                    width: 70%;
+                    text-align: center;
+                }
+            }
+        }
+        .products 
+        {
+            width: 67%;
+            line-height: 1;
+            padding-left: 0.5vw;
+            //display: table-cell;
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            height: 3vh;
+            .holder 
+            {
+                text-align: center;
+                height: 3vh;
+                width: 100%;
+                display: table;
+                .dropdownI
+                {
+                    display: table-cell;
+                    width: 12.5vw;
+                    padding-left: 2vw;
+                    padding-right: 0.5vw;
+                    text-align: left;
+                    .drop 
+                    {
+                        color: white;
+                        padding: 0;
+                        cursor: pointer;
+                        padding-left: 0.5vw;
+                        padding-right: 0.5vw;
+                        border: none;
+                        text-align: center;
+                        height: 3vh;
+                        p 
+                        {
+                            line-height: 1.5;
+                            font-size: 2vh;
+                            vertical-align: middle;
+                        }
+                    }
+                
+                    .dropItems
+                    {
+                        position: absolute;
+                        width: 12.5vw;
+                        overflow: auto;
+                        height: 0;
+                        z-index: 800;
+                        transition: all 0.3s ease-in-out;
+                        text-align: center;
+                        padding-left: 0.5vw;
+                        .item 
+                        {
+                            color: white;
+                            cursor: pointer;
+                            margin-top: 1vh;
+                            font-size: 1.5vh;
+                        }
+                        .item:hover 
+                        {
+                            text-decoration: underline;
+                        }
+                    }
+                    .dropItems.active
+                    {
+                        overflow: hidden;
+                        height: max-content;
+                    }
+                }
+            }
+        }
+        .cart
+        {
+            width: 12%;
+            line-height: 1;
+            padding-left: 0.5vw;
+            //display: table-cell;
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            height: 3vh;
+            text-align: center;
+            .dropdownC
+            {
+                display: table-cell;
+                width: 12.5vw;
+                text-align: center;
+                .drop 
+                {
+                    color: white;
+                    padding: 0;
+                    cursor: pointer;
+                    padding-left: 0.5vw;
+                    padding-right: 0.5vw;
+                    border: none;
+                    text-align: center;
+                    height: 3vh;
+                    p 
+                    {
+                        line-height: 1.5;
+                        font-size: 2vh;
+                        vertical-align: middle;
+                    }
+                }
+                .vertLine
+                    {
+                        position: absolute;
+                        height: 2vh;
+                        border: 1px solid black;
+                        float: unset;
+                        margin-left: 50%;
+                    }
+                .dropItems
+                {
+                    position: absolute;
+                    width: 11.5vw;
+                    overflow: auto;
+                    height: 0;
+                    margin-top: 2vh;
+                    z-index: 800;
+                    transition: all 0.3s ease-in-out;
+                    text-align: center;
+                    
+                    .item 
+                    {
+                        color: black;
+                        font-size: 1.5vh;
+                        border: 1px solid black;
+                        border-bottom: none;
+                        padding-left: 0.5vw;
+                        padding-right: 0.5vw;
+                        padding-top: 0.5vh;
+                        padding-bottom: 0.5vh;
+                        p 
+                        {
+                            display: inline-block;
+                        }
+                        .name 
+                        {
+                            width: 70%;
+                            text-align: left;
+                            font-size: 1.6vh;
+                        }
+                        .cost 
+                        {
+                            width: 30%;
+                            text-align: right;
+                            font-size: 1.5vh;
+                        }
+                        .quantity 
+                        {
+                            width: 70%;
+                            text-align: left;
+                            font-size: 1.5vh;
+                        }
+                        .remove 
+                        {
+                            width: 30%;
+                            color: #f84646;
+                            text-align: right;
+                            cursor: pointer;
+                        }
+                    }
+                    .order 
+                    {
+                        padding-top: 0.5vh;
+                        padding-bottom: 0.5vh;
+                        cursor: pointer;
+                    }
+                }
+                .dropItems.active
+                {
+                    overflow: auto;
+                    height: 30vh;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<div class="menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="dropdown menu-dropdown">
+            <div (click)="switchDropdown()" class="dropdown-toggle" >
+              <fa name="bars"></fa>
+              <span class="dropdown-label">MENU</span>
+            </div>
+            <div class="dropdown-menu" [ngClass]="{'show': dropdownShown}">
+              <a class="dropdown-item" href="#">O FIRMIE</a>
+              <a class="dropdown-item" href="#">PARTNERZY</a>
+              <a class="dropdown-item" href="#">REGULAMIN</a>
+              <a class="dropdown-item" href="#">KONTAKT</a>
+              <a class="dropdown-item" href="#">DOSTAWY</a>
+              <a class="dropdown-item" href="#">SKLEP <br>STACJONARNY</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 search">
+          <fa name="search"></fa>
+        </div>
+        <div class="col-sm">
+          <div class="navbar-options">
+            <div routerLink="/oils">
+              OLEJE
+            </div>
+            <div class="dropdown">
+              <div (click)="switchFiltersDropdown()" class="dropdown-toggle" >
+              <span class="dropdown-label">FILTRY</span>
+            </div>
+            <div class="dropdown-menu" [ngClass]="{'show': filtersDropdownShown}">
+              <a class="dropdown-item" (click)="switchFiltersDropdown()" routerLink="/filters/{{type}}" *ngFor="let type of filterTypes">{{type}}</a>
+            </div>
+            </div>
+            <div>
+              WYCIERACZKI 
+            </div>
+            <div>
+              KOSMETYKI
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 shopping">
+          TWÓJ KOSZYK 
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,26 @@
+<div class="loginPanel">
+
+  <div class="container">
+    <div class="header bgBlack">
+      <p class="title bgRed">
+        Logowanie
+      </p>
+    </div>
+    <div  class="inputs">
+      <div class="label">
+        <p class="infoForm">Login:</p>
+        <input class="pcsInputField" [(ngModel)]='user["0"]' />
+
+      </div>
+      <div class="label">
+        <p class="infoForm">Hasło:</p>
+        <input class="pcsInputField" type="password" [(ngModel)]='user["1"]' />
+
+      </div>
+      <p class="alert">LOGIN LUB HASŁO NIEPRAWIDŁOWE</p>
+      <button class="bgRed" (click)="login()">
+        <p class="button">Zaloguj</p>
+      </button>
+    </div>
+  </div>
+</div>

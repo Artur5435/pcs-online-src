@@ -1,0 +1,35 @@
+<div class="registerPanel">
+  <div class="container">
+    <div class="header bgBlack">
+      <p class="title bgRed">
+        Rejestracja
+      </p>
+    </div>
+    <div class="inputs">
+      <div class="label">
+        <p class="infoForm">Login:</p>
+        <input (input)="this.LoginSet()" class="login1 pcsInputField" type="text" />
+
+      </div>
+      <div class="label">
+        <p class="infoForm">Hasło:</p>
+        <input  (input)="this.CheckPwd($event)" class="pwd1 pcsInputField" type="password"/>
+
+      </div>
+      <div class="label">
+        <p class="infoForm">Powtórz Hasło:</p>
+        <input  (input)="this.CheckPwd($event)" class="pwd2 pcsInputField" type="password"/>
+
+      </div>
+      <div class="label">
+        <p class="infoForm">E-mail:</p>
+        <input (input)="this.CheckMail()" type="mail" class="mail pcsInputField"/>
+
+      </div>
+      <p class="alert"></p>
+      <button  class="bgRed" (click)="register()">
+        <p class="button">Zarejestruj</p>
+      </button>
+    </div>
+  </div>
+</div>

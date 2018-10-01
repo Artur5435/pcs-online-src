@@ -1,0 +1,81 @@
+<div class="loginPanel">
+
+  <div class="container">
+    <div class="header bgBlack">
+      <p class="title bgRed">
+        ZAMÓWIENIE
+      </p>
+    </div>
+    <div class="left">
+      <div class="cart">
+        <div class="item" *ngFor="let item of this.itemService.cart; let i = index; trackBy: trackItem">
+          <p class="number">{{i+1}}</p>
+          <div class="name bgBlack">
+            <p class="type ">{{item.Nazwa}}</p>
+            <p class="id bgRed">{{item.ID}}</p>
+          </div>
+          <p class="quantity">{{item.Ilosc}}</p>
+          <p class="price">{{item.CenaBrutto}},-</p>
+          <p class="delete" (click)="Remove(i)">X</p>
+        </div>
+      </div>
+      <div class="przesylka">
+        <div class="typ bgBlack" *ngFor="let type of this.sendForms; let i = index">
+            {{type.Opis}} - {{type.Cena}},-
+                <div *ngIf="i == this.choosenSendType" (click)="choose(i)"class="chosen active">
+      
+                </div>
+                <div *ngIf="i != this.choosenSendType" (click)="choose(i)"class="chosen">
+      
+                  </div>
+        </div>
+      </div>
+      <div class="suma">
+        <p>Razem:&nbsp;</p>
+        <p class="kwota"> {{Sumuj()}},-</p>
+      </div>
+    </div>
+    <div id="dataForm" class="dataForm">
+      <div class="inputs">
+        <div class="label">
+          <p class="infoForm">Imię:</p>
+          <input class="pcsInputField" id="FirstName" [(ngModel)]='userData.FirstName' />
+        </div>
+        <div class="label">
+          <p class="infoForm">Nazwisko:</p>
+          <input class="pcsInputField" id="LastName" [(ngModel)]='userData.LastName' />
+        </div>
+        <div class="label">
+          <p class="infoForm">Miasto:</p>
+          <input class="pcsInputField" id="City" [(ngModel)]='userData.City' />
+        </div>
+        <div class="label">
+          <p class="infoForm">Ulica:</p>
+          <input class="pcsInputField" id="Street" [(ngModel)]='userData.Street' />
+        </div>
+        <div class="label">
+          <p class="infoForm">NIP:</p>
+          <input class="pcsInputField" id="NIP" [(ngModel)]='userData.NIP' />
+        </div>
+        <div class="label">
+          <p class="infoForm">Kod pocztowy:</p>
+          <input class="pcsInputField" id="PostalCode" [(ngModel)]='userData.PostalCode' />
+        </div>
+        <div class="label">
+          <p class="infoForm">Numer domu:</p>
+          <input class="pcsInputField" id="HouseNum" [(ngModel)]='userData.HouseNum' />
+        </div>
+        <div class="label">
+          <p class="infoForm">Numer lokalu:</p>
+          <input class="pcsInputField" id="AppartmentNum" [(ngModel)]='userData.AppartmentNum' />
+        </div>
+        <button class="bgRed" (click)="Autofill()" *ngIf="userData.Login">
+          <p class="button ">Uzupełnij automatycznie</p>
+        </button>
+      </div>
+    </div>
+    <button class="bgRed send" *ngIf="this.itemService.cart.length" (click)="SendOrder()">
+      <p class="button ">Wyślij zamówienie</p>
+    </button>
+  </div>
+</div>

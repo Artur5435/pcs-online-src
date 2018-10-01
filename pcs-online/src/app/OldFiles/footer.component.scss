@@ -1,0 +1,16 @@
+@import "../../../styles-variables";
+
+.footerComp {
+    background-image: url("../../../assets/img/blackback.png");
+    height: 5vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0vh;
+    color: white;
+    
+    .content {
+		h6 {
+			font-size: 3vh;
+		}
+    }
+}
